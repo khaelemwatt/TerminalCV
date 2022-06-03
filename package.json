@@ -3,11 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
-<<<<<<< HEAD
     "cors": "^2.8.5",
     "express": "^4.18.1",
-=======
->>>>>>> a8dbc9f31d46404cbfde188a47a9566c730d2abb
     "node-pty": "^0.10.1",
     "ws": "^8.7.0"
   },
