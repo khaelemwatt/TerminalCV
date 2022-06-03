@@ -5,7 +5,7 @@ const PTYService = require("./PTYService");
 const cors = require("cors");
 const SocketService = require("./SocketService");
 
-const PORT = process.env.PORT || 8080;
+const PORT = 8080;
 
 const serverApp = express();
 serverApp.use(cors());
