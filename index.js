@@ -25,9 +25,15 @@ wss.on("connection", (ws) => {
 
 // const port = 8080;
 
+<<<<<<< HEAD
 // server.listen(port, function() {
 //   console.log("Server listening on : ", port);
 //   const socketService = new SocketService();
+=======
+server.listen(process.env.PORT || port, function() {
+  console.log("Server listening on : ", port);
+  const socketService = new SocketService();
+>>>>>>> c048212e2204b94ccce222ee0e643a3db97631a5
 
 //  // We are going to pass server to socket.io in SocketService.js
 //   socketService.attachServer(server);
