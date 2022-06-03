@@ -2,11 +2,6 @@
 
 const os = require("os");
 const pty = require("node-pty");
-const cors = require('cors');
-const express = require("express");
-const app = express();
-
-app.use(cors());
 
 class PTY {
   constructor(socket) {
@@ -47,7 +42,7 @@ class PTY {
 
   sendToClient(data) {
     // Emit data to socket.io client in an event "output"
-    this.socket.emit("output", data);
+    this.socket.send(data);
   }
 }
 
