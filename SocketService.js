@@ -2,7 +2,6 @@
 
 const socketIO = require("socket.io");
 const PTYService = require("./PTYService");
-const cors = require('cors');
 const express = require("express");
 const app = express();
 

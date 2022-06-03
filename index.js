@@ -1,10 +1,16 @@
 //index.js
 const http = require("http");
+const express = require("express");
+const cors = require("cors");
 //const SocketService = require("./SocketService");
-const { Server } = require("ws");
-const wss = new Server({server});
 
 const PORT = process.env.PORT || 8080;
+
+const server = express().listen(PORT, () => console.log(`Listening on ${PORT}`));
+server.use(cors());
+
+const { Server } = require("ws");
+const wss = new Server({server});
 
 wss.on("connection", (ws) => {
   console.log("Client Connected");
@@ -25,16 +31,9 @@ wss.on("connection", (ws) => {
 
 // const port = 8080;
 
-<<<<<<< HEAD
 // server.listen(port, function() {
 //   console.log("Server listening on : ", port);
 //   const socketService = new SocketService();
-=======
-server.listen(process.env.PORT || port, function() {
-  console.log("Server listening on : ", port);
-  const socketService = new SocketService();
->>>>>>> c048212e2204b94ccce222ee0e643a3db97631a5
-
 //  // We are going to pass server to socket.io in SocketService.js
 //   socketService.attachServer(server);
 // });
