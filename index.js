@@ -16,7 +16,7 @@ const io = require("socket.io")(server, options);
 
 const port = 8080;
 
-server.listen(port, function() {
+server.listen(process.env.PORT || port, function() {
   console.log("Server listening on : ", port);
   const socketService = new SocketService();
 
